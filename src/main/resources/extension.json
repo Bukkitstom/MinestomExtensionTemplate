@@ -1,0 +1,5 @@
+{
+  "entrypoint": "org.bukkitstom.yourextension.YourExtension",
+  "name": "YourExtension",
+  "version": "1.0.0"
+}
