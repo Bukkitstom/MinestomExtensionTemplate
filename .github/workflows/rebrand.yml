@@ -4,7 +4,7 @@ name: rebrand
 
 # Controls when the workflow will run
 on:
-  fork:
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,4 +27,4 @@ jobs:
           branch: master
           name: rebrander
           repo: Bukkitstom/rebrander
-      - run: ./bundle.js --name ${{github.repository#*/}} --class ${{github.repository#*/}} --package me.${{github.repository_owner}}.${{github.repository#*/}} --author ${{github.repository_owner}}
+      - run: ./bundle.js --name ${{github.repository#*/}} --class ${{github.event.repository.name}} --package me.${{github.repository_owner}}.${{github.event.repository.name}} --author ${{github.repository_owner}}
