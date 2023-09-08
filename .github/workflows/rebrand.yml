@@ -27,4 +27,4 @@ jobs:
           branch: master
           name: rebrander
           repo: Bukkitstom/rebrander
-      - run: ./bundle.js --name ${{github.repository#*/}} --class ${{github.event.repository.name}} --package me.${{github.repository_owner}}.${{github.event.repository.name}} --author ${{github.repository_owner}}
+      - run: ./bundle.js --name ${{github.event.repository.name}} --class ${{github.event.repository.name}} --package me.${{github.repository_owner}}.${{github.event.repository.name}} --author ${{github.repository_owner}}
